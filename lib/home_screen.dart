@@ -16,8 +16,18 @@ class _HomeScreenState extends State<HomeScreen> {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      child: Text("Bạn đã login thành công vào acc ${email}"),
+    return Scaffold(
+      appBar: AppBar(
+        title: Text('Hieu'),
+      ),
+      body: Column(
+        mainAxisAlignment: MainAxisAlignment.center,
+        children: [
+          Container(
+            child: Text("Bạn đã login thành công vào acc ${email}"),
+          ),
+        ],
+      ),
     );
   }
 }

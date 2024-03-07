@@ -42,14 +42,17 @@ class _LoginScreenState extends State<LoginScreen> {
     var userName = userTextController.text;
     var password = passwordTextController.text;
     if (userName.length < 6 || password.length < 6) {
-      showDialog(context: context, builder: (context){
-        return const AlertDialog(
-          content: Text("Email or password invalid"),
-        );
-      });
+      showDialog(
+          context: context,
+          builder: (context) {
+            return const AlertDialog(
+              content: Text("Email or password invalid"),
+            );
+          });
       return;
     }
-    Navigator.push(context, MaterialPageRoute(builder:(c) => HomeScreen(userName)));
+    Navigator.push(
+        context, MaterialPageRoute(builder: (c) => HomeScreen(userName)));
   }
 
   @override
